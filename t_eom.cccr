@@ -3,7 +3,7 @@ for i in */;
 do
 	(
 		cd $i/inp;
-		grep "\!" *.out | grep "CCSD" > energy.dat;
+		grep "excited state energy" *.out > energy.dat;
 	)
 done;
 

@@ -1,5 +1,3 @@
-#!/bin/bash
-echo "Running anpass"
 anpaste.sh
 echo "Running intder_geom"
 intgeom.sh

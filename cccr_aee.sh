@@ -1,6 +1,6 @@
 #!/bin/bash
 echo "Make sure you run it in the freqs/geo/pts dir!"
-cmin=$(cd pts; new.cccr | tail -1 | awk '{print $NF}')
+cmin=$(cd pts; cccr_pure.sh | tail -1 | awk '{print $NF}')
 anmin=$(cd freqs; grep -a "WHERE" anpass1.out | awk '{print $NF}')
 zpt=$(cd freqs; summarize spectro2.out | head -1 | awk '{print $2}' | cut -d= -f2) 
 echo "CcCR min: $cmin"

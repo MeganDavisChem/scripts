@@ -7,8 +7,9 @@
 #uncommment line at bottom for non-composite methods
 #grep "Excitation energy / hartree" *.out > xs_all.dat
 grep "EOM State" *.com.dat > xs_all.dat
-sed -n '/0\.0[6-9]/p' xs_all.dat > xs.dat
+#sed -n '/0\.1[5-9]/p' xs_all.dat > xs.dat
 #sed -n '/0\.0[7-9]\|0\.10/p' xs_all.dat > xs.dat
+sed -n '/0\.000[2-5]\|0\.10/p' xs_all.dat > xs.dat
 #grep "EOM-CCSD right-hand side ground state energy / hartree" *.out > gs.dat
 #grep "CCSD(T) total energy / hartree" *.out > gs.dat
 grep "CCSD(T) total energy" *.com.dat > gs.dat
